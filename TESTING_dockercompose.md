@@ -1,7 +1,7 @@
-Docker Compose Drupal 9 base - php8, nginx, mariadb
-===================================================
+Docker Compose Drupal 9 base - php8, nginx, mariadb, solr
+=========================================================
 
-This is a docker-compose version of the Lando example tests:
+This is a docker-compose version of the Lagoon-example tests:
 
 Start up tests
 --------------
@@ -37,6 +37,7 @@ docker ps --filter label=com.docker.compose.project=drupal9-solr | grep Up | gre
 docker ps --filter label=com.docker.compose.project=drupal9-solr | grep Up | grep drupal9-solr_mariadb_1
 docker ps --filter label=com.docker.compose.project=drupal9-solr | grep Up | grep drupal9-solr_php_1
 docker ps --filter label=com.docker.compose.project=drupal9-solr | grep Up | grep drupal9-solr_cli_1
+docker ps --filter label=com.docker.compose.project=drupal9-solr | grep Up | grep drupal9-solr_solr_1
 
 # Should ssh against the cli container by default
 docker-compose exec -T cli bash -c "env | grep LAGOON=" | grep cli-drupal

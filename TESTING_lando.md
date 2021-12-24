@@ -1,7 +1,8 @@
-Lando Drupal 9 base - php8, nginx, mariadb
-==========================================
+Lando Drupal 9 base - php8, nginx, mariadb, solr
+================================================
 
-This example exists primarily to test the following documentation:
+This is a Lando version of the Lagoon-example tests:
+
 
 * [Lagoon Recipe - Drupal 9](https://docs.lando.dev/config/lagoon.html)
 
@@ -38,6 +39,7 @@ docker ps --filter label=com.docker.compose.project=drupal9solr | grep Up | grep
 docker ps --filter label=com.docker.compose.project=drupal9solr | grep Up | grep drupal9solr_php_1
 docker ps --filter label=com.docker.compose.project=drupal9solr | grep Up | grep drupal9solr_cli_1
 docker ps --filter label=com.docker.compose.project=drupal9solr | grep Up | grep drupal9solr_lagooncli_1
+docker ps --filter label=com.docker.compose.project=drupal9solr | grep Up | grep drupal9solr_solr_1
 
 # Should ssh against the cli container by default
 lando ssh -c "env | grep LAGOON=" | grep cli-drupal
