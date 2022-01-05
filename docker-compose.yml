@@ -26,6 +26,8 @@ volumes:
     {}
   db:
     {}
+  search:
+    {}
 
 services:
 
@@ -108,6 +110,8 @@ services:
       - "8983" # exposes the port 8983 with a random local port, find it with `docker-compose port solr 8983`
     environment:
       << : *default-environment
+    volumes:
+      - search:/var/solr
 
 networks:
   amazeeio-network:
