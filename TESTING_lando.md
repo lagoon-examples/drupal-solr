@@ -1,5 +1,5 @@
-Lando Drupal 9 base - php8, nginx, mariadb, solr
-================================================
+Lando Drupal 9 Solr option  - php8, nginx, mariadb, solr
+========================================================
 
 This is a Lando version of the Lagoon-example tests:
 

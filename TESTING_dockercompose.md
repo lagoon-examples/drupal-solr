@@ -1,5 +1,5 @@
-Docker Compose Drupal 9 base - php8, nginx, mariadb, solr
-=========================================================
+Docker Compose Drupal 9 Solr option  - php8, nginx, mariadb, solr
+=================================================================
 
 This is a docker-compose version of the Lagoon-example tests:
 
