@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "47e05bbfd3f4f2d20bd2859a497b68d6",
+    "content-hash": "2bf43b1e0cb8e03d7701a554b4c81855",
     "packages": [
         {
             "name": "amazeeio/drupal_integrations",
@@ -1549,10 +1549,14 @@
                 }
             },
             "autoload": {
+                "files": [
+                    "includes/bootstrap.inc",
+                    "includes/guzzle_php81_shim.php"
+                ],
                 "psr-4": {
                     "Drupal\\Core\\": "lib/Drupal/Core",
-                    "Drupal\\Component\\": "lib/Drupal/Component",
-                    "Drupal\\Driver\\": "../drivers/lib/Drupal/Driver"
+                    "Drupal\\Driver\\": "../drivers/lib/Drupal/Driver",
+                    "Drupal\\Component\\": "lib/Drupal/Component"
                 },
                 "classmap": [
                     "lib/Drupal.php",
@@ -1581,10 +1585,6 @@
                     "lib/Drupal/Core/Http/InputBag.php",
                     "lib/Drupal/Core/Installer/InstallerRedirectTrait.php",
                     "lib/Drupal/Core/Site/Settings.php"
-                ],
-                "files": [
-                    "includes/bootstrap.inc",
-                    "includes/guzzle_php81_shim.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1776,17 +1776,17 @@
         },
         {
             "name": "drupal/lagoon_logs",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/lagoon_logs.git",
-                "reference": "2.0.0"
+                "reference": "2.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/lagoon_logs-2.0.0.zip",
-                "reference": "2.0.0",
-                "shasum": "0894b71640367b54de85cd34f1a7200b4407ea81"
+                "url": "https://ftp.drupal.org/files/projects/lagoon_logs-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "c948df7eee43206a5dcd5e58e0ac6cf929f1e24f"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -1795,8 +1795,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0",
-                    "datestamp": "1641410429",
+                    "version": "2.0.1",
+                    "datestamp": "1643805127",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1820,6 +1820,10 @@
                 {
                     "name": "fjgarlin",
                     "homepage": "https://www.drupal.org/user/2495842"
+                },
+                {
+                    "name": "tim.clifford",
+                    "homepage": "https://www.drupal.org/user/3460013"
                 }
             ],
             "description": "Lagoon_logs D8 is a convenience wrapper for monolog.",
@@ -2526,12 +2530,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "GuzzleHttp\\Psr7\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "GuzzleHttp\\Psr7\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
