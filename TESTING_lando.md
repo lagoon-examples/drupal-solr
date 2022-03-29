@@ -76,13 +76,13 @@ lando lagoon --version | grep lagoon
 lando ssh -s cli -c "curl -kL http://nginx:8080" | grep "Welcome to Drush Site-Install"
 
 # Should have a "drupal" Solr core
-lando ssh -s cli -c "curl solr:8983/solr/admin/cores?action=STATUS&core=drupal"
+lando ssh -s cli -c "curl solr:8983/solr/admin/cores?action=STATUS'&'core=drupal"
 
 # Should be able to reload "drupal" Solr core
-lando ssh -s cli -c "curl solr:8983/solr/admin/cores?action=RELOAD&core=drupal"
+lando ssh -s cli -c "curl solr:8983/solr/admin/cores?action=RELOAD'&'core=drupal"
 
-# Check Solr has 7.x config in "drupal" core
-lando ssh -s solr -c "cat /opt/solr/server/solr/mycores/drupal/conf/schema.xml | grep solr-7.x"
+# Check Solr has 8.x config in "drupal" core
+lando ssh -s solr -c "cat /var/solr/data/drupal/conf/schema.xml | grep solr-8.x"
 
 # Should be able to db-export and db-import the database
 lando db-export test.sql

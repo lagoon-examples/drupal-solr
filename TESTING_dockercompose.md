@@ -71,13 +71,13 @@ docker-compose exec -T cli bash -c "yarn --version"
 docker-compose exec -T cli bash -c "curl -kL http://nginx:8080" | grep "Welcome to Drush Site-Install"
 
 # Should have a "drupal" Solr core
-docker-compose exec -T cli bash -c "curl solr:8983/solr/admin/cores?action=STATUS&core=drupal"
+docker-compose exec -T cli bash -c "curl solr:8983/solr/admin/cores?action=STATUS'&'core=drupal"
 
 # Should be able to reload "drupal" Solr core
-docker-compose exec -T cli bash -c "curl solr:8983/solr/admin/cores?action=RELOAD&core=drupal"
+docker-compose exec -T cli bash -c "curl solr:8983/solr/admin/cores?action=RELOAD'&'core=drupal"
 
-# Check Solr has 7.x config in "drupal" core
-docker-compose exec -T solr bash -c "cat /opt/solr/server/solr/mycores/drupal/conf/schema.xml | grep solr-7.x"
+# Check Solr has 8.x config in "drupal" core
+docker-compose exec -T solr bash -c "cat /var/solr/data/drupal/conf/schema.xml | grep solr-8.x"
 
 # Should be able to db-export and db-import the database
 docker-compose exec -T cli bash -c "drush sql-dump --result-file /app/test.sql"

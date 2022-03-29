@@ -102,7 +102,9 @@ services:
       - db:/var/lib/mysql
 
   solr:
-    image: uselagoon/solr-7-drupal:latest
+    build:
+      context: .
+      dockerfile: lagoon/solr.dockerfile
     labels:
       lagoon.type: solr
       lando.type: solr-drupal
