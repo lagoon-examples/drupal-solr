@@ -24,7 +24,7 @@
         "drupal/core-project-message": "9.4.2",
         "drupal/core-recommended": "9.4.2",
         "drupal/lagoon_logs": "2.0.1",
-        "drupal/search_api": "1.24.0",
+        "drupal/search_api": "1.25.0",
         "drupal/search_api_solr": "4.2.8",
         "drush/drush": "11.1.1",
         "zaporylie/composer-drupal-optimizations": "1.2.0"
