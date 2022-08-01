@@ -12,6 +12,7 @@ This example contains the following services:
 * PHP 8.0
 * NGINX
 * MariaDB 10.5
+* Solr 8
 
 To see similar projects with additional services, please visit https://github.com/lagoon-examples and to find out more about the services, please visit the documentation at https://docs.lagoon.sh/lagoon
 
@@ -29,7 +30,7 @@ To see similar projects with additional services, please visit https://github.co
 1. Checkout this project repo and confirm the path is in Docker's file sharing config - https://docs.docker.com/docker-for-mac/#file-sharing
 
     ```bash
-    git clone https://github.com/lagoon-examples/drupal9-solr.git drupal9-solr && cd $_
+    git clone https://github.com/lagoon-examples/drupal9-solr8.git drupal9-solr8 && cd $_
     ```
 
 2. Make sure you don't have anything running on port 80 on the host machine (like a web server) then run `pygmy-go up`
@@ -41,7 +42,7 @@ To see similar projects with additional services, please visit https://github.co
     docker-compose exec cli composer install
     ```
 
-4. Visit the new site @ `http://drupal9-solr.docker.amazee.io`
+4. Visit the new site @ `http://drupal9-solr8.docker.amazee.io`
 
 * If any steps fail, you're safe to rerun from any point.
 Starting again from the beginning will just reconfirm the changes.
@@ -55,7 +56,7 @@ This repository is set up with a `.lando.yml` file, which allows you to use Land
 2. Checkout the project repo and confirm the path is in Docker's file sharing config - https://docs.docker.com/docker-for-mac/#file-sharing
 
     ```bash
-    git clone https://github.com/lagoon-examples/drupal9-solr.git drupal9-solr && cd $_
+    git clone https://github.com/lagoon-examples/drupal9-solr8.git drupal9-solr8 && cd $_
     ```
 
 3. Make sure you have pygmy-go stopped. Run `pygmy-go stop` to be sure.
@@ -72,7 +73,7 @@ lando start
 lando drush si -y
 ```
 
-6. Visit the new site @ `http://drupal9-solr.lndo.site`
+6. Visit the new site @ `http://drupal9-solr8.lndo.site`
  
 7. For more information on how to configure your site, check out the [documentation](https://docs.lando.dev/config/lagoon.html).
 

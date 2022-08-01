@@ -1,6 +1,6 @@
 docker-compose-yaml: docker-compose.yml
 
-project: drupal9-solr
+project: drupal9-solr8
 
 tasks:
 #   pre-rollout:
