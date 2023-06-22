@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "472e6a4a7d3ff227d881389cbcd87620",
+    "content-hash": "2327035b9e090e74cb035fea5d36d0fb",
     "packages": [
         {
             "name": "amazeeio/drupal_integrations",
@@ -1773,17 +1773,17 @@
         },
         {
             "name": "drupal/search_api_solr",
-            "version": "4.2.11",
+            "version": "4.2.12",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/search_api_solr.git",
-                "reference": "4.2.11"
+                "reference": "4.2.12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_api_solr-4.2.11.zip",
-                "reference": "4.2.11",
-                "shasum": "dad7b3f0fe5e4edce57dc8a800afcca181e7d6ae"
+                "url": "https://ftp.drupal.org/files/projects/search_api_solr-4.2.12.zip",
+                "reference": "4.2.12",
+                "shasum": "3e6c7b22cdd1339e8373f700fdfdec332ea24e02"
             },
             "require": {
                 "composer/semver": "^1.0|^3.0",
@@ -1821,8 +1821,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "4.2.11",
-                    "datestamp": "1686919012",
+                    "version": "4.2.12",
+                    "datestamp": "1687445036",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2936,16 +2936,16 @@
         },
         {
             "name": "maennchen/zipstream-php",
-            "version": "3.0.2",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/maennchen/ZipStream-PHP.git",
-                "reference": "b46726e666b5d2ad32959ae9492ee1034e798162"
+                "reference": "b8174494eda667f7d13876b4a7bfef0f62a7c0d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maennchen/ZipStream-PHP/zipball/b46726e666b5d2ad32959ae9492ee1034e798162",
-                "reference": "b46726e666b5d2ad32959ae9492ee1034e798162",
+                "url": "https://api.github.com/repos/maennchen/ZipStream-PHP/zipball/b8174494eda667f7d13876b4a7bfef0f62a7c0d1",
+                "reference": "b8174494eda667f7d13876b4a7bfef0f62a7c0d1",
                 "shasum": ""
             },
             "require": {
@@ -3001,7 +3001,7 @@
             ],
             "support": {
                 "issues": "https://github.com/maennchen/ZipStream-PHP/issues",
-                "source": "https://github.com/maennchen/ZipStream-PHP/tree/3.0.2"
+                "source": "https://github.com/maennchen/ZipStream-PHP/tree/3.1.0"
             },
             "funding": [
                 {
@@ -3013,7 +3013,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2023-04-19T19:51:03+00:00"
+            "time": "2023-06-21T14:59:35+00:00"
         },
         {
             "name": "masterminds/html5",
@@ -3959,16 +3959,16 @@
         },
         {
             "name": "solarium/solarium",
-            "version": "6.3.0",
+            "version": "6.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solariumphp/solarium.git",
-                "reference": "26295386d896d01937a4ec21436581aac86a3e9a"
+                "reference": "2c3d36d0e35fa88e386c80958b0b106f947fdce1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solariumphp/solarium/zipball/26295386d896d01937a4ec21436581aac86a3e9a",
-                "reference": "26295386d896d01937a4ec21436581aac86a3e9a",
+                "url": "https://api.github.com/repos/solariumphp/solarium/zipball/2c3d36d0e35fa88e386c80958b0b106f947fdce1",
+                "reference": "2c3d36d0e35fa88e386c80958b0b106f947fdce1",
                 "shasum": ""
             },
             "require": {
@@ -4020,9 +4020,9 @@
             ],
             "support": {
                 "issues": "https://github.com/solariumphp/solarium/issues",
-                "source": "https://github.com/solariumphp/solarium/tree/6.3.0"
+                "source": "https://github.com/solariumphp/solarium/tree/6.3.1"
             },
-            "time": "2023-06-13T07:45:42+00:00"
+            "time": "2023-06-22T14:24:00+00:00"
         },
         {
             "name": "stack/builder",
