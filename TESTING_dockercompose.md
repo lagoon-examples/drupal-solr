@@ -33,11 +33,11 @@ docker compose exec -T cli bash -c "drush cr -y"
 docker compose exec -T cli bash -c "drush status" | grep "Drupal bootstrap" | grep "Successful"
 
 # Should have all the services we expect
-docker ps --filter label=com.docker.compose.project=drupal-solr8 | grep Up | grep drupal-solr8_nginx_1
-docker ps --filter label=com.docker.compose.project=drupal-solr8 | grep Up | grep drupal-solr8_mariadb_1
-docker ps --filter label=com.docker.compose.project=drupal-solr8 | grep Up | grep drupal-solr8_php_1
-docker ps --filter label=com.docker.compose.project=drupal-solr8 | grep Up | grep drupal-solr8_cli_1
-docker ps --filter label=com.docker.compose.project=drupal-solr8 | grep Up | grep drupal-solr8_solr_1
+docker ps --filter label=com.docker.compose.project=drupal-solr8 | grep Up | grep drupal-solr8-nginx-1
+docker ps --filter label=com.docker.compose.project=drupal-solr8 | grep Up | grep drupal-solr8-mariadb-1
+docker ps --filter label=com.docker.compose.project=drupal-solr8 | grep Up | grep drupal-solr8-php-1
+docker ps --filter label=com.docker.compose.project=drupal-solr8 | grep Up | grep drupal-solr8-cli-1
+docker ps --filter label=com.docker.compose.project=drupal-solr8 | grep Up | grep drupal-solr8-solr-1
 
 # Should ssh against the cli container by default
 docker compose exec -T cli bash -c "env | grep LAGOON=" | grep cli-drupal
