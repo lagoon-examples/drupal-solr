@@ -1,5 +1,5 @@
 {
-    "name": "lagoon-examples/drupal9-solr8",
+    "name": "lagoon-examples/drupal-solr8",
     "description": "Project template for Drupal 9 projects with MariaDB, hosted on Lagoon",
     "type": "project",
     "license": "GPL-2.0-or-later",
@@ -20,17 +20,14 @@
         "amazeeio/drupal_integrations": "0.4.0",
         "composer/installers": "2.2.0",
         "cweagans/composer-patches": "1.7.3",
-        "drupal/core-composer-scaffold": "9.5.11",
-        "drupal/core-project-message": "9.5.11",
-        "drupal/core-recommended": "9.5.11",
-        "drupal/lagoon_logs": "2.1.1",
-        "drupal/search_api": "1.30.0",
-        "drupal/search_api_solr": "4.3.1",
-        "drush/drush": "11.6.0",
+        "drupal/core-composer-scaffold": "10.2.2",
+        "drupal/core-project-message": "10.2.2",
+        "drupal/core-recommended": "10.2.2",
+        "drupal/lagoon_logs": "3.0.0",
+        "drupal/search_api": "1.31.0",
+        "drupal/search_api_solr": "4.3.2",
+        "drush/drush": "12.4.3",
         "zaporylie/composer-drupal-optimizations": "1.2.0"
-    },
-    "require-dev": {
-        "drupal/core-dev-pinned": "9.5.11"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -46,7 +43,9 @@
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
             "zaporylie/composer-drupal-optimizations": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "php-http/discovery": true,
+            "phpstan/extension-installer": true
         }
     },
     "extra": {
@@ -71,5 +70,8 @@
                 "web-root": "web/"
             }
         }
+    },
+    "require-dev": {
+        "drupal/core-dev-pinned": "10.2.2"
     }
 }

@@ -33,19 +33,19 @@ lando drush cr -y
 lando drush status | grep "Drupal bootstrap" | grep "Successful"
 
 # Should have all the services we expect
-docker ps --filter label=com.docker.compose.project=drupal9solr8 | grep Up | grep drupal9solr8_nginx_1
-docker ps --filter label=com.docker.compose.project=drupal9solr8 | grep Up | grep drupal9solr8_mariadb_1
-docker ps --filter label=com.docker.compose.project=drupal9solr8 | grep Up | grep drupal9solr8_mailhog_1
-docker ps --filter label=com.docker.compose.project=drupal9solr8 | grep Up | grep drupal9solr8_php_1
-docker ps --filter label=com.docker.compose.project=drupal9solr8 | grep Up | grep drupal9solr8_cli_1
-docker ps --filter label=com.docker.compose.project=drupal9solr8 | grep Up | grep drupal9solr8_lagooncli_1
-docker ps --filter label=com.docker.compose.project=drupal9solr8 | grep Up | grep drupal9solr8_solr_1
+docker ps --filter label=com.docker.compose.project=drupalsolr8 | grep Up | grep drupalsolr8_nginx_1
+docker ps --filter label=com.docker.compose.project=drupalsolr8 | grep Up | grep drupalsolr8_mariadb_1
+docker ps --filter label=com.docker.compose.project=drupalsolr8 | grep Up | grep drupalsolr8_mailhog_1
+docker ps --filter label=com.docker.compose.project=drupalsolr8 | grep Up | grep drupalsolr8_php_1
+docker ps --filter label=com.docker.compose.project=drupalsolr8 | grep Up | grep drupalsolr8_cli_1
+docker ps --filter label=com.docker.compose.project=drupalsolr8 | grep Up | grep drupalsolr8_lagooncli_1
+docker ps --filter label=com.docker.compose.project=drupalsolr8 | grep Up | grep drupalsolr8_solr_1
 
 # Should ssh against the cli container by default
 lando ssh -c "env | grep LAGOON=" | grep cli-drupal
 
 # Should have the correct environment set
-lando ssh -c "env" | grep LAGOON_ROUTE | grep drupal9-solr8.lndo.site
+lando ssh -c "env" | grep LAGOON_ROUTE | grep drupal-solr8.lndo.site
 lando ssh -c "env" | grep LAGOON_ENVIRONMENT_TYPE | grep development
 
 # Should be running PHP 8
