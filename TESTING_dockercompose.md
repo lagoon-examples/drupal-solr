@@ -18,7 +18,7 @@ docker-compose down
 docker-compose build && docker-compose up -d
 
 # Ensure mariadb pod is ready to connect
-docker run --rm --net drupal9-solr_default amazeeio/dockerize dockerize -wait tcp://mariadb:3306 -timeout 1m
+docker run --rm --net drupal-solr_default amazeeio/dockerize dockerize -wait tcp://mariadb:3306 -timeout 1m
 ```
 
 Verification commands
@@ -33,17 +33,17 @@ docker-compose exec -T cli bash -c "drush cr -y"
 docker-compose exec -T cli bash -c "drush status" | grep "Drupal bootstrap" | grep "Successful"
 
 # Should have all the services we expect
-docker ps --filter label=com.docker.compose.project=drupal9-solr | grep Up | grep drupal9-solr_nginx_1
-docker ps --filter label=com.docker.compose.project=drupal9-solr | grep Up | grep drupal9-solr_mariadb_1
-docker ps --filter label=com.docker.compose.project=drupal9-solr | grep Up | grep drupal9-solr_php_1
-docker ps --filter label=com.docker.compose.project=drupal9-solr | grep Up | grep drupal9-solr_cli_1
-docker ps --filter label=com.docker.compose.project=drupal9-solr | grep Up | grep drupal9-solr_solr_1
+docker ps --filter label=com.docker.compose.project=drupal-solr | grep Up | grep drupal-solr_nginx_1
+docker ps --filter label=com.docker.compose.project=drupal-solr | grep Up | grep drupal-solr_mariadb_1
+docker ps --filter label=com.docker.compose.project=drupal-solr | grep Up | grep drupal-solr_php_1
+docker ps --filter label=com.docker.compose.project=drupal-solr | grep Up | grep drupal-solr_cli_1
+docker ps --filter label=com.docker.compose.project=drupal-solr | grep Up | grep drupal-solr_solr_1
 
 # Should ssh against the cli container by default
 docker-compose exec -T cli bash -c "env | grep LAGOON=" | grep cli-drupal
 
 # Should have the correct environment set
-docker-compose exec -T cli bash -c "env" | grep LAGOON_ROUTE | grep drupal9-solr.docker.amazee.io
+docker-compose exec -T cli bash -c "env" | grep LAGOON_ROUTE | grep drupal-solr.docker.amazee.io
 docker-compose exec -T cli bash -c "env" | grep LAGOON_ENVIRONMENT_TYPE | grep development
 
 # Should be running PHP 8

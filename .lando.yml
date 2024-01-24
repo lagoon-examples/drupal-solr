@@ -1,4 +1,4 @@
-name: drupal9-solr
+name: drupal-solr
 recipe: lagoon
 config:
   flavor: drupal
