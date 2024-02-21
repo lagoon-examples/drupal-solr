@@ -1,7 +1,6 @@
 {
   "baseBranches": [
-    "main",
-    "solr8"
+    "main"
   ],
   "extends": ["config:base"],
   "automerge": true,

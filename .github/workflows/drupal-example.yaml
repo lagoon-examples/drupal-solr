@@ -4,11 +4,9 @@ on:
   push:
     branches:
       - 'main'
-      - 'solr8'
   pull_request:
     branches:
       - 'main'
-      - 'solr8'
 
 jobs:
   test-suite:
@@ -66,4 +64,4 @@ jobs:
     # - name: Show Lando logs
     #   continue-on-error: true
     #   run: |
-    #     docker compose -p drupalsolr8 logs
+    #     docker compose -p drupalsolr logs
