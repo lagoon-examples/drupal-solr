@@ -1,4 +1,4 @@
-Docker Compose Drupal Solr8 option  - php8, nginx, mariadb, solr8
+Docker Compose Drupal Solr9 option  - php8, nginx, mariadb, solr9
 ===================================================================
 
 This is a docker compose version of the Lagoon-example tests:
@@ -76,8 +76,8 @@ docker compose exec -T cli bash -c "curl solr:8983/solr/admin/cores?action=STATU
 # Should be able to reload "drupal" Solr core
 docker compose exec -T cli bash -c "curl solr:8983/solr/admin/cores?action=RELOAD\&core=drupal"
 
-# Check Solr has 8.x config in "drupal" core
-docker compose exec -T solr bash -c "cat /var/solr/data/drupal/conf/schema.xml | grep solr-8.x"
+# Check Solr has 9.x config in "drupal" core
+docker compose exec -T solr bash -c "cat /var/solr/data/drupal/conf/schema.xml | grep solr-9.x"
 
 # Should be able to db-export and db-import the database
 docker compose exec -T cli bash -c "drush sql-dump --result-file /app/test.sql"

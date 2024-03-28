@@ -36,6 +36,7 @@ if (getenv('LAGOON')) {
     $config['search_api.server.solr']['backend_config']['connector_config']['path'] = '/';
     $config['search_api.server.solr']['backend_config']['connector_config']['core'] = getenv('SOLR_CORE') ?: 'drupal';
     $config['search_api.server.solr']['backend_config']['connector_config']['port'] = 8983;
+    $config['search_api.server.solr']['backend_config']['connector_config']['solr_install_dir'] = getenv('SOLR_INSTALL_DIR') ?: '/opt/solr';
     $config['search_api.server.solr']['backend_config']['connector_config']['http_user'] = (getenv('SOLR_USER') ?: '');
     $config['search_api.server.solr']['backend_config']['connector_config']['http']['http_user'] = (getenv('SOLR_USER') ?: '');
     $config['search_api.server.solr']['backend_config']['connector_config']['http_pass'] = (getenv('SOLR_PASSWORD') ?: '');

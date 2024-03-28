@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'main'
+      - 'solr9'
   pull_request:
     branches:
       - 'main'
