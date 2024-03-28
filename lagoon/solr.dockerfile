@@ -1,7 +1,7 @@
 ARG CLI_IMAGE
 FROM ${CLI_IMAGE} as cli
 
-FROM testlagoon/solr-9-drupal:pr-951
+FROM testlagoon/solr-9-drupal:pr-963
 
 COPY --from=cli /app/web/modules/contrib/search_api_solr/jump-start/solr9/config-set/ /solr-conf/conf
 
