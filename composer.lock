@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4a736d7c4576324e512ebae34398c87b",
+    "content-hash": "f68a0b96839404ffe98c03fedf263cd2",
     "packages": [
         {
             "name": "amazeeio/drupal_integrations",
@@ -1641,17 +1641,17 @@
         },
         {
             "name": "drupal/search_api",
-            "version": "1.32.0",
+            "version": "1.33.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/search_api.git",
-                "reference": "8.x-1.32"
+                "reference": "8.x-1.33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_api-8.x-1.32.zip",
-                "reference": "8.x-1.32",
-                "shasum": "db113afc4d6aa6d36a341dfede718b732ee0ba6f"
+                "url": "https://ftp.drupal.org/files/projects/search_api-8.x-1.33.zip",
+                "reference": "8.x-1.33",
+                "shasum": "6414709995217599839167bc638e0e49243ff714"
             },
             "require": {
                 "drupal/core": "^10.1 || ^11"
@@ -1672,8 +1672,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.32",
-                    "datestamp": "1711906241",
+                    "version": "8.x-1.33",
+                    "datestamp": "1712242225",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
