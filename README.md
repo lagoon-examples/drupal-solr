@@ -1,4 +1,4 @@
-# Base template for Drupal 9 projects hosted on Lagoon
+# Base template for Drupal projects hosted on Lagoon
 
 This template includes everything necessary to run on [Lagoon](https://www.github.com/uselagoon/lagoon) (in both the local development environments or on hosted Lagoon clusters.)
 
@@ -8,24 +8,36 @@ dependencies with [Composer](https://getcomposer.org/). It is based on the [orig
 ## Included Services
 
 This example contains the following services:
-* Drupal 9.2
-* PHP 8.0
+* Drupal 10
+* PHP 8
 * NGINX
-* MariaDB 10.5
+* MariaDB 10.x
 * Solr 8
 
 To see similar projects with additional services, please visit https://github.com/lagoon-examples and to find out more about the services, please visit the documentation at https://docs.lagoon.sh/lagoon
 
+## Notes on the Solr configurations in this project
+
+### Lagoon Solr connection.
+You have to create a search_api server having "solr" machine name at `/admin/config/search/search-api/add-server` to make the automated configuration included in the all.settings.php file work.
+
+## Solr core updating
+When running a solr `image` instead of a `build` (ie `image: uselagoon/solr-8-drupal:latest` in your docker-compose.yml file) you should periodically reload and update the config in the solr service. This is done by ssh'ing into the solr service and running the command to read the new config from the image and recreate the solr core with it.
+
+```
+solr-recreate drupal /solr-conf
+```
+
 ## Requirements
 
 * [docker](https://docs.docker.com/install/)
-* [pygmy-go](https://www.github.com/fubarhouse/pygmy-go)
+* [pygmy](https://www.github.com/pygmystack/pygmy)
 
 **OR**
 
 * [Lando](https://docs.lando.dev/basics/installation.html#system-requirements)
 
-## Local environment setup - pygmy-go
+## Local environment setup - pygmy
 
 1. Checkout this project repo and confirm the path is in Docker's file sharing config - https://docs.docker.com/docker-for-mac/#file-sharing
 
@@ -33,7 +45,7 @@ To see similar projects with additional services, please visit https://github.co
     git clone https://github.com/lagoon-examples/drupal-solr.git drupal-solr && cd $_
     ```
 
-2. Make sure you don't have anything running on port 80 on the host machine (like a web server) then run `pygmy-go up`
+2. Make sure you don't have anything running on port 80 on the host machine (like a web server) then run `pygmy up`
 
 3. Build and start the build images:
 
