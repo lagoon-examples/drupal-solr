@@ -4,3 +4,6 @@ config:
   flavor: drupal
   build:
     - composer install
+services:
+  solr:
+    command: solr-precreate drupal /solr-conf
