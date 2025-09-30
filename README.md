@@ -8,11 +8,11 @@ dependencies with [Composer](https://getcomposer.org/). It is based on the [orig
 ## Included Services
 
 This example contains the following services:
-* Drupal 10
+* Drupal 11
 * PHP 8
 * NGINX
 * MariaDB 10.x
-* Solr 8
+* Solr 9
 
 To see similar projects with additional services, please visit https://github.com/lagoon-examples and to find out more about the services, please visit the documentation at https://docs.lagoon.sh/lagoon
 
@@ -22,7 +22,7 @@ To see similar projects with additional services, please visit https://github.co
 You have to create a search_api server having "solr" machine name at `/admin/config/search/search-api/add-server` to make the automated configuration included in the all.settings.php file work.
 
 ## Solr core updating
-When running a solr `image` instead of a `build` (ie `image: uselagoon/solr-8-drupal:latest` in your docker-compose.yml file) you should periodically reload and update the config in the solr service. This is done by ssh'ing into the solr service and running the command to read the new config from the image and recreate the solr core with it.
+When running a solr `image` instead of a `build` (ie `image: uselagoon/solr-9-drupal:latest` in your docker-compose.yml file) you should periodically reload and update the config in the solr service. This is done by ssh'ing into the solr service and running the command to read the new config from the image and recreate the solr core with it.
 
 ```
 solr-recreate drupal /solr-conf

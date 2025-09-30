@@ -1,5 +1,5 @@
-Docker Compose Drupal Solr8 option  - php8, nginx, mariadb, solr8
-===================================================================
+Docker Compose Drupal Solr9 option  - php8, nginx, mariadb, solr9
+=================================================================
 
 This is a docker compose version of the Lagoon-example tests:
 
@@ -14,7 +14,7 @@ sed -i -e "/###/d" docker-compose.yml
 docker network inspect amazeeio-network >/dev/null || docker network create amazeeio-network
 docker compose down
 
-# Should start up our Lagoon Drupal 9 site successfully
+# Should start up our Lagoon Drupal site successfully
 docker compose build && docker compose up -d
 
 # Ensure mariadb pod is ready to connect
@@ -67,7 +67,7 @@ docker compose exec -T cli bash -c "node --version"
 # Should have yarn
 docker compose exec -T cli bash -c "yarn --version"
 
-# Should have a running Drupal 9 site served by nginx on port 8080
+# Should have a running Drupal site served by nginx on port 8080
 docker compose exec -T cli bash -c "curl -kL http://nginx:8080" | grep "Drush Site-Install"
 
 # Should have a "drupal" Solr core
@@ -76,8 +76,8 @@ docker compose exec -T cli bash -c "curl solr:8983/solr/admin/cores?action=STATU
 # Should be able to reload "drupal" Solr core
 docker compose exec -T cli bash -c "curl solr:8983/solr/admin/cores?action=RELOAD\&core=drupal"
 
-# Check Solr has 8.x config in "drupal" core
-docker compose exec -T solr bash -c "cat /var/solr/data/drupal/conf/schema.xml | grep solr-8.x"
+# Check Solr has 9.x config in "drupal" core
+docker compose exec -T solr bash -c "cat /var/solr/data/drupal/conf/schema.xml | grep solr-9.x"
 
 # Should be able to db-export and db-import the database
 docker compose exec -T cli bash -c "drush sql-dump --result-file /app/test.sql"
@@ -101,6 +101,6 @@ Destroy tests
 Run the following commands to trash this app like nothing ever happened.
 
 ```bash
-# Should be able to destroy our Drupal 9 site with success
+# Should be able to destroy our Drupal site with success
 docker compose down --volumes --remove-orphans
 ```
