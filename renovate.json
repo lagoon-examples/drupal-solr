@@ -23,7 +23,7 @@
         "minor"
       ],
       "matchPackageNames": [
-        "drupal/core-dev-pinned",
+        "drupal/core-dev",
         "drupal/core-recommended",
         "drupal/core-composer-scaffold",
         "drupal/core-project-message"
@@ -38,7 +38,7 @@
         "major"
       ],
       "matchPackageNames": [
-        "drupal/core-dev-pinned",
+        "drupal/core-dev",
         "drupal/core-recommended",
         "drupal/core-composer-scaffold",
         "drupal/core-project-message"
