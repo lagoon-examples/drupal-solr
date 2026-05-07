@@ -1,7 +1,6 @@
 {
   "baseBranchPatterns": [
-    "main",
-    "solr9"
+    "main"
   ],
   "extends": [
     "config:recommended"
